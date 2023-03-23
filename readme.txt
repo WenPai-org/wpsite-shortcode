@@ -24,8 +24,7 @@ How to use the WPSite Shortcode:
 
 **1.Shortcode**
 
-You can use the [wpicp_license] shortcode to display ICP anywhere, usually the Ministry of Industry and Information Technology of China requires it to be displayed on the homepage of the website.
-
+You can add existing wpsite shortcodes to any article or page for use, just like other WordPress shortcodes.
 
 **2.integrate to theme/plugin**
 
