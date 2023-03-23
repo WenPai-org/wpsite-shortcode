@@ -152,9 +152,9 @@ function wpsite_shortcode_render_settings_page() {
         <div class="wpsite-shortcode-column">
           <h3><span class="dashicons dashicons-admin-post"></span> <?php _e( 'Post Shortcode', 'wpsite-shortcode' ); ?></h3>
           <p><?php _e( 'Use the shortcode below to display your WordPress Post/Pages Metadata.', 'wpsite-shortcode' ); ?></p>
-          <p><?php _e( 'Post Title ', 'wpsite-shortcode' ); ?></p>
+          <p><?php _e( 'Post Title', 'wpsite-shortcode' ); ?></p>
           <code>[wpsite_posttitle]</code>
-          <p><?php _e( 'Post Excerpt ', 'wpsite-shortcode' ); ?></p>
+          <p><?php _e( 'Post Excerpt', 'wpsite-shortcode' ); ?></p>
           <code>[wpsite_postexcerpt]</code>
           <p><?php _e( 'Post Author', 'wpsite-shortcode' ); ?></p>
           <code>[wpsite_postauthor]</code>
