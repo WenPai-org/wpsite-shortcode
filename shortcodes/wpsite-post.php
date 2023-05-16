@@ -47,6 +47,22 @@ function wpsite_shortcode_post_author( $atts ) {
 add_shortcode( 'wpsite_postauthor', 'wpsite_shortcode_post_author' );
 
 
+// Post Author Avatar Shortcode: [wpsite_author_avatar]
+function wpsite_shortcode_author_avatar( $atts ) {
+  $atts = shortcode_atts( array(
+    'size' => '96',
+  ), $atts );
+
+  $post_id = get_the_ID();
+  $author_id = get_post_field( 'post_author', $post_id );
+
+  $avatar = get_avatar_url( $author_id, array('size' => $atts['size']) );
+
+  return $avatar;
+}
+add_shortcode( 'wpsite_author_avatar', 'wpsite_shortcode_author_avatar' );
+
+
 //Post Date Shortcode:[wpsite_postdate]
 function wpsite_shortcode_post_date( $atts ) {
 $atts = shortcode_atts( array(
