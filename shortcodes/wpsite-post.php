@@ -56,11 +56,12 @@ function wpsite_shortcode_author_avatar( $atts ) {
   $post_id = get_the_ID();
   $author_id = get_post_field( 'post_author', $post_id );
 
-  $avatar = get_avatar_url( $author_id, array('size' => $atts['size']) );
+  $avatar = get_avatar( $author_id, $atts['size'] );
 
   return $avatar;
 }
 add_shortcode( 'wpsite_author_avatar', 'wpsite_shortcode_author_avatar' );
+
 
 
 //Post Date Shortcode:[wpsite_postdate]
