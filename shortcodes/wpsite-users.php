@@ -43,12 +43,18 @@ function wpsite_user_bio_shortcode() {
 add_shortcode( 'wpsite_userbio', 'wpsite_user_bio_shortcode' );
 
 
-//User Website Shortcode:[wpsite_website]
+// User Website Shortcode: [wpsite_website]
 function wpsite_user_website_shortcode() {
     $user_website = get_the_author_meta( 'user_url' );
-    return $user_website;
+    $parsed_website = parse_url($user_website);
+    $display_website = preg_replace('/^(www\.)/i', '', $parsed_website['host']);
+        if (!empty($display_website)) {
+        return '<a href="' . esc_url($user_website) . '" target="_blank">' . esc_html($display_website) . '</a>';
+    }
+    return '';
 }
 add_shortcode( 'wpsite_website', 'wpsite_user_website_shortcode' );
+
 
 
 //User EMail Shortcode:[wpsite_useremail]
