@@ -173,7 +173,9 @@ function user_last_login( $user_login, $user ) {
 add_action( 'wp_login', 'user_last_login', 10, 2 );
 
 function wpsite_shortcode_user_lastlogin() {
-    $last_login = get_the_author_meta('last_login');
+    $current_user = wp_get_current_user();
+    $user_ID = $current_user->id;
+    $last_login = get_user_meta($user_ID,'last_login',true);
 
     if ( ! $last_login ) {
         return 'Never';
