@@ -1,10 +1,5 @@
 <?php
-/**
- * Plugin Name: WPSite Shortcode
- * Plugin URI: https://wpsite.cn/shortcode
- * Author: WPSite.cn
- * Author URI: https://wpsite.cn/
- */
+
 
 if ( ! defined( 'ABSPATH' ) ) {
   exit; // Exit if accessed directly

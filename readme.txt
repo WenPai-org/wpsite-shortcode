@@ -4,7 +4,7 @@ Tags: Shortcode,Dynamic Data,Metadata,SEO
 Requires at least: 5.4
 Tested up to: 6.2.2
 Requires PHP: 5.6
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -72,10 +72,14 @@ Starting with WPSite Shortcode consists of just two steps: installing and settin
 
 == Changelog ==
 
+### 1.1.2 ###
+
+* Fix "The plugin does not have a valid header"
+
 
 ### 1.1 ###
 
-*Compatible up to 6.2.2
+* Compatible up to 6.2.2
 * Fix getting website date [wpsite_date].
 * Fix getting website time [wpsite_time].
 * Added 10 Shortcode support.
