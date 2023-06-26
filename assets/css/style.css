@@ -6,7 +6,7 @@
 }
 
 .wpsite-shortcode-column {
-  flex-basis: calc(33% - 20px);
+  flex-basis: calc(25% - 20px);
   margin: 10px;
   padding: 20px;
   background-color: #fff;
@@ -44,8 +44,34 @@
     height: auto;
   }
 }
+/*
+.wpsite-shortcode-column h3 {
+    position: relative;
+    margin: -1px -1px 5px;
+    padding: 15px 18px 14px 15px;
+    border: 1px solid #2271b1;
+    border-bottom: none;
+    line-height: 1.4;
+    font-size: 14px;
+    color: #fff;
+    background: #2271b1;
+    background-color: #3858e9;
+    border-color: #2145e6;
+}
 
-
+h3.woo {
+    border-color: #7f54b3;
+    background-color: #7f54b3;
+}
+h3.bbp {
+    border-color: #7f54b3;
+    background-color: #7f54b3;
+}
+h3.bp {
+    border-color: #7f54b3;
+    background-color: #7f54b3;
+}
+ */
 
 .wpsite-shortcode-info {
   display: flex;

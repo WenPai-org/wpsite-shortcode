@@ -1,7 +1,8 @@
 === WPSite Shortcode ===
-Tags: Shortcode,Dynamic Data,Metadata
+Contributors: wpfanyi
+Tags: Shortcode,Dynamic Data,Metadata,SEO
 Requires at least: 5.4
-Tested up to: 6.2
+Tested up to: 6.2.2
 Requires PHP: 5.6
 Stable tag: 1.1
 License: GPLv2
@@ -71,6 +72,13 @@ Starting with WPSite Shortcode consists of just two steps: installing and settin
 
 == Changelog ==
 
+
+### 1.1 ###
+
+*Compatible up to 6.2.2
+* Fix getting website date [wpsite_date].
+* Fix getting website time [wpsite_time].
+* Added 10 Shortcode support.
 
 ### 1.0.0 ###
 

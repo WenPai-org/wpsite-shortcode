@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <!-- General Shortcodes -->
       <!-- Add general shortcodes here -->
       <div class="wpsite-shortcode-columns">
-        <div class="wpsite-shortcode-column-wp">
+        <div class="wpsite-shortcode-column">
           <h3><span class="dashicons dashicons-admin-settings"></span> <?php _e( 'Settings Shortcode', 'wpsite-shortcode' ); ?></h3>
           <p><?php _e( 'Use the shortcode below to display your WordPress Site Settings.', 'wpsite-shortcode' ); ?></p>
           <p><?php _e( 'Site Url', 'wpsite-shortcode' ); ?></p>
@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           <code>[wpsite_time]</code>
         </div><!-- Settings Shortcode End -->
 
-        <div class="wpsite-shortcode-column-wp">
+        <div class="wpsite-shortcode-column">
           <h3><span class="dashicons dashicons-admin-users"></span> <?php _e( 'User Shortcode', 'wpsite-shortcode' ); ?></h3>
           <p><?php _e( 'Use the shortcode below to display your WordPress Current User Detail.', 'wpsite-shortcode' ); ?></p>
           <p><?php _e( 'User Name', 'wpsite-shortcode' ); ?></p>
@@ -52,7 +52,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           <code>[wpsite_lastlogin]</code>
         </div><!-- User Shortcode End -->
 
-        <div class="wpsite-shortcode-column-wp">
+        <div class="wpsite-shortcode-column">
           <h3><span class="dashicons dashicons-admin-post"></span> <?php _e( 'Post Shortcode', 'wpsite-shortcode' ); ?></h3>
           <p><?php _e( 'Use the shortcode below to display your WordPress Post/Pages Metadata.', 'wpsite-shortcode' ); ?></p>
           <p><?php _e( 'Post Title', 'wpsite-shortcode' ); ?></p>
@@ -81,7 +81,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           <code>[wpsite_commentscount]</code>
         </div><!-- Post Shortcode End -->
 
-        <div class="wpsite-shortcode-column-wp">
+        <div class="wpsite-shortcode-column">
           <h3><span class="dashicons dashicons-admin-media"></span> <?php _e( 'Media Shortcode', 'wpsite-shortcode' ); ?></h3>
           <p><?php _e( 'Use the shortcode below to display your WordPress Media Library items.', 'wpsite-shortcode' ); ?></p>
           <p><?php _e( 'Show Image', 'wpsite-shortcode' ); ?></p>
@@ -96,7 +96,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           <code>[wpsite_spreadsheets]</code>
       </div><!-- Media Shortcode End -->
 
-      <div class="wpsite-shortcode-column-wp">
+      <div class="wpsite-shortcode-column">
           <h3><span class="dashicons dashicons-admin-appearance"></span> <?php _e( 'Widgets Shortcode', 'wpsite-shortcode' ); ?></h3>
           <p><?php _e( 'Use the shortcode below to display your WordPress Default Widget.', 'wpsite-shortcode' ); ?></p>
           <p><?php _e( 'Search Widget', 'wpsite-shortcode' ); ?></p>
@@ -111,7 +111,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           <code>[wpsite_recentcomments]</code>
      </div><!-- Widget Shortcode End -->
 
-     <div class="wpsite-shortcode-column-wp">
+     <div class="wpsite-shortcode-column">
           <h3><span class="dashicons dashicons-coffee"></span> <?php _e( 'Date Shortcode', 'wpsite-shortcode' ); ?></h3>
           <p><?php _e( 'Use the shortcode below to display your WordPress Default Widget.', 'wpsite-shortcode' ); ?></p>
           <p><?php _e( 'Show Year', 'wpsite-shortcode' ); ?></p>
@@ -120,6 +120,11 @@ if ( ! defined( 'ABSPATH' ) ) {
           <code>[wpsite_m]</code>
           <p><?php _e( 'Show Day', 'wpsite-shortcode' ); ?></p>
           <code>[wpsite_d]</code>
+     </div><!-- Date Shortcode End -->
+
+     <div class="wpsite-shortcode-column">
+          <h3><span class="dashicons dashicons-carrot"></span> <?php _e( 'Character Shortcode', 'wpsite-shortcode' ); ?></h3>
+          <p><?php _e( 'Use the shortcode below to display your Website Character.', 'wpsite-shortcode' ); ?></p>
           <p><?php _e( 'Copyright Character', 'wpsite-shortcode' ); ?></p>
           <code>[wpsite_c]</code>
           <p><?php _e( 'Registered Trademark Character', 'wpsite-shortcode' ); ?></p>
@@ -130,8 +135,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           <code>[wpsite_sm]</code>
      </div><!-- Date Shortcode End -->
 
-
-     <div class="wpsite-shortcode-column-wp">
+     <div class="wpsite-shortcode-column">
          <h3><span class="dashicons dashicons-admin-generic"></span> <?php _e( 'Other Shortcode', 'wpsite-shortcode' ); ?></h3>
          <p><?php _e( 'More shortcodes will follow…', 'wpsite-shortcode' ); ?></p>
          <p><?php _e( 'If you need dynamic data shortcode for WooCommerce, bbPress, BuddyPress, we will add it in future version.', 'wpsite-shortcode' ); ?></p>

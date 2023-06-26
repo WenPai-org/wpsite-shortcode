@@ -39,12 +39,16 @@ require_once( plugin_dir_path( __FILE__ ) . 'shortcodes/wpsite-date.php' );
 
 // Enqueue the plugin CSS stylesheet.
 function wpsite_shortcode_enqueue_scripts() {
-  // Enqueue the plugin CSS stylesheet.
   $css_dir = plugin_dir_url( __FILE__ ) . 'assets/css/';
   wp_enqueue_style( 'wpsite-shortcode-settings', $css_dir . 'style.css', array(), '1.0.0', 'all' );
-
 }
 add_action( 'admin_enqueue_scripts', 'wpsite_shortcode_enqueue_scripts' );
+
+// Enqueue the toggle script.
+function add_toggle_script() {
+  wp_enqueue_script( 'toggle-script', plugin_dir_url( __FILE__ ) . 'assets/js/toggle.js', array( 'jquery' ), '1.0', true );
+}
+add_action( 'admin_enqueue_scripts', 'add_toggle_script' );
 
 
 // Load translation
@@ -66,3 +70,21 @@ function wpsite_shortcode_add_settings_page() {
   );
 }
 add_action( 'admin_menu', 'wpsite_shortcode_add_settings_page' );
+
+
+// Render the plugin settings page.
+function wpsite_shortcode_count() {
+    $count = 0;
+    $shortcodes_dir = plugin_dir_path( __FILE__ ) . 'shortcodes/';
+    if ( is_dir( $shortcodes_dir ) ) {
+        $files = scandir( $shortcodes_dir );
+        foreach ( $files as $file ) {
+            if ( substr( $file, -4 ) === '.php' ) {
+                $content = file_get_contents( $shortcodes_dir . $file );
+                preg_match_all( '/add_shortcode\(\s?[\'"]wpsite_(.*?)\s?[\'"]/', $content, $matches );
+                $count += count( $matches[0] );
+            }
+        }
+    }
+    return $count;
+}

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WPSite Shortcode\n"
-"POT-Creation-Date: 2023-03-23 22:26+0800\n"
-"PO-Revision-Date: 2023-03-23 22:40+0800\n"
+"POT-Creation-Date: 2023-06-26 12:00+0800\n"
+"PO-Revision-Date: 2023-06-26 12:05+0800\n"
 "Last-Translator: 薇晓朵 <support@weixiaoduo.com>\n"
 "Language-Team: 薇曉朵 <support@weixiaoduo.com>\n"
 "Language: zh_TW\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: wpsite-shortcode.php\n"
@@ -21,19 +21,11 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: shortcodes/wpsite-users.php:130
-msgid "Never"
-msgstr "從未有過"
-
-#: wpsite-shortcode.php:57 wpsite-shortcode.php:92
+#: includes/settings-page.php:22 wpsite-shortcode.php:65
 msgid "WPSite Shortcode Settings"
 msgstr "文派網站簡碼設定"
 
-#: wpsite-shortcode.php:58
-msgid "Site Shortcode"
-msgstr "網站簡碼"
-
-#: wpsite-shortcode.php:93
+#: includes/settings-page.php:23
 msgid ""
 "The WPSite.cn Shortcode plugin provides a set of pre-built shortcodes that "
 "can be used by WordPress website owners and developers without having to "
@@ -42,7 +34,7 @@ msgstr ""
 "文派網站簡碼(WPSite.cn)外掛提供了一組預先構建的短程式碼，WordPress站長和開發"
 "人員可以直接使用，而無需編寫自定義程式碼。"
 
-#: wpsite-shortcode.php:94
+#: includes/settings-page.php:24
 msgid ""
 "By using the dynamic data of WordPress itself, the content of the website "
 "can be displayed more flexibly.It can also usually be used as a wildcard for "
@@ -51,237 +43,289 @@ msgstr ""
 "通過使用WordPress本身的動態資料，可以更靈活地展示網站的內容。它通常也可以用"
 "作 SEO 的萬用字元。"
 
-#: wpsite-shortcode.php:97
+#: includes/settings-page.php:28
 msgid "Plugin Information"
 msgstr "外掛資訊"
 
-#: wpsite-shortcode.php:102
+#: includes/settings-page.php:33
 #, php-format
 msgid "Total shortcodes: %d"
 msgstr "總計簡碼：%d"
 
-#: wpsite-shortcode.php:103
+#: includes/settings-page.php:34
 #, php-format
 msgid "Version: %s"
 msgstr "版本：%s"
 
-#: wpsite-shortcode.php:104
+#: includes/settings-page.php:35
 #, php-format
 msgid "Author: %s"
 msgstr "作者：%s"
 
-#: wpsite-shortcode.php:105
+#: includes/settings-page.php:36
 #, php-format
 msgid "Support: <a href=\"%s\" target=\"_blank\">View Document</a>"
 msgstr "支援： <a href=\"%s\" target=\"_blank\">檢視文件</a>"
 
-#: wpsite-shortcode.php:111
+#: includes/settings-page.php:42
+msgid "WordPress Metadata"
+msgstr "WordPress後設資料"
+
+#: includes/wordpress-shortcodes.php:14
 msgid "Settings Shortcode"
 msgstr "設定簡碼"
 
-#: wpsite-shortcode.php:112
+#: includes/wordpress-shortcodes.php:15
 msgid "Use the shortcode below to display your WordPress Site Settings."
 msgstr "使用下面的簡碼顯示您的WordPress網站設定。"
 
-#: wpsite-shortcode.php:113
+#: includes/wordpress-shortcodes.php:16
 msgid "Site Url"
 msgstr "網站網址"
 
-#: wpsite-shortcode.php:115
+#: includes/wordpress-shortcodes.php:18
 msgid "Site Home"
 msgstr "網站首頁"
 
-#: wpsite-shortcode.php:117
+#: includes/wordpress-shortcodes.php:20
 msgid "Site Title"
 msgstr "網站標題"
 
-#: wpsite-shortcode.php:119
+#: includes/wordpress-shortcodes.php:22
 msgid "Tagline"
 msgstr "標語"
 
-#: wpsite-shortcode.php:121
+#: includes/wordpress-shortcodes.php:24
 msgid "Administration Email Address"
 msgstr "管理員郵箱地址"
 
-#: wpsite-shortcode.php:123
+#: includes/wordpress-shortcodes.php:26
 msgid "Date"
 msgstr "日期"
 
-#: wpsite-shortcode.php:125
+#: includes/wordpress-shortcodes.php:28
 msgid "Time"
 msgstr "時間"
 
-#: wpsite-shortcode.php:130
+#: includes/wordpress-shortcodes.php:33
 msgid "User Shortcode"
 msgstr "使用者簡碼"
 
-#: wpsite-shortcode.php:131
+#: includes/wordpress-shortcodes.php:34
 msgid "Use the shortcode below to display your WordPress Current User Detail."
 msgstr "使用下面的簡碼顯示您的WordPress當前使用者詳細資訊。"
 
-#: wpsite-shortcode.php:132
+#: includes/wordpress-shortcodes.php:35
 msgid "User Name"
 msgstr "使用者名稱"
 
-#: wpsite-shortcode.php:134
+#: includes/wordpress-shortcodes.php:37
 msgid "Nick Name"
 msgstr "暱稱"
 
-#: wpsite-shortcode.php:136
+#: includes/wordpress-shortcodes.php:39
 msgid "User EMail"
 msgstr "使用者郵件地址"
 
-#: wpsite-shortcode.php:138
+#: includes/wordpress-shortcodes.php:41
 msgid "User Avatar"
 msgstr "使用者頭像"
 
-#: wpsite-shortcode.php:140
+#: includes/wordpress-shortcodes.php:43
 msgid "User Role"
 msgstr "使用者欄位"
 
-#: wpsite-shortcode.php:142
+#: includes/wordpress-shortcodes.php:45
 msgid "User Bio"
 msgstr "使用者簡介"
 
-#: wpsite-shortcode.php:144
+#: includes/wordpress-shortcodes.php:47
 msgid "User Website"
 msgstr "使用者網站"
 
-#: wpsite-shortcode.php:146
+#: includes/wordpress-shortcodes.php:49
 msgid "User Registered Date"
 msgstr "使用者註冊日期"
 
-#: wpsite-shortcode.php:148
+#: includes/wordpress-shortcodes.php:51
 msgid "User Last Login"
 msgstr "使用者上次登入"
 
-#: wpsite-shortcode.php:153
+#: includes/wordpress-shortcodes.php:56
 msgid "Post Shortcode"
 msgstr "文章簡碼"
 
-#: wpsite-shortcode.php:154
+#: includes/wordpress-shortcodes.php:57
 msgid "Use the shortcode below to display your WordPress Post/Pages Metadata."
 msgstr "使用下面的簡碼顯示您的WordPress文章/頁面後設資料。"
 
-#: wpsite-shortcode.php:155
-msgid "Post Title "
+#: includes/wordpress-shortcodes.php:58
+msgid "Post Title"
 msgstr "文章標題"
 
-#: wpsite-shortcode.php:157
-msgid "Post Excerpt "
+#: includes/wordpress-shortcodes.php:60
+msgid "Post Excerpt"
 msgstr "文章摘要"
 
-#: wpsite-shortcode.php:159
+#: includes/wordpress-shortcodes.php:62
 msgid "Post Author"
 msgstr "文章作者"
 
-#: wpsite-shortcode.php:161
+#: includes/wordpress-shortcodes.php:64
 msgid "Post Date"
 msgstr "文章日期"
 
-#: wpsite-shortcode.php:163
+#: includes/wordpress-shortcodes.php:66
 msgid "Post Modified Date"
 msgstr "文章修改日期"
 
-#: wpsite-shortcode.php:165
+#: includes/wordpress-shortcodes.php:68
 msgid "Post Slug"
 msgstr "文章別名"
 
-#: wpsite-shortcode.php:167
+#: includes/wordpress-shortcodes.php:70
 msgid "Post Url"
 msgstr "文章網址"
 
-#: wpsite-shortcode.php:169
+#: includes/wordpress-shortcodes.php:72
 msgid "Post Featured Image"
 msgstr "文章特色影象"
 
-#: wpsite-shortcode.php:171
+#: includes/wordpress-shortcodes.php:74
 msgid "Post Tags"
 msgstr "文章標籤"
 
-#: wpsite-shortcode.php:173
+#: includes/wordpress-shortcodes.php:76
 msgid "Post Categories"
 msgstr "文章分類"
 
-#: wpsite-shortcode.php:175
+#: includes/wordpress-shortcodes.php:78
 msgid "Post Parent Category"
 msgstr "文章父級分類"
 
-#: wpsite-shortcode.php:177
+#: includes/wordpress-shortcodes.php:80
 msgid "Post Comments Count"
 msgstr "文章評論計數"
 
-#: wpsite-shortcode.php:182
+#: includes/wordpress-shortcodes.php:85
 msgid "Media Shortcode"
 msgstr "媒體簡碼"
 
-#: wpsite-shortcode.php:183
+#: includes/wordpress-shortcodes.php:86
 msgid "Use the shortcode below to display your WordPress Media Library items."
 msgstr "使用下面的簡碼顯示您的WordPress媒體庫專案。"
 
-#: wpsite-shortcode.php:184
+#: includes/wordpress-shortcodes.php:87
 msgid "Show Image"
 msgstr "顯示影象"
 
-#: wpsite-shortcode.php:186
+#: includes/wordpress-shortcodes.php:89
 msgid "Show Audio"
 msgstr "顯示音訊"
 
-#: wpsite-shortcode.php:188
+#: includes/wordpress-shortcodes.php:91
 msgid "Show Video"
 msgstr "顯示視訊"
 
-#: wpsite-shortcode.php:190
+#: includes/wordpress-shortcodes.php:93
 msgid "Show Document"
 msgstr "顯示文件"
 
-#: wpsite-shortcode.php:192
+#: includes/wordpress-shortcodes.php:95
 msgid "Show Spreadsheets"
 msgstr "顯示電子表格"
 
-#: wpsite-shortcode.php:197
+#: includes/wordpress-shortcodes.php:100
 msgid "Widgets Shortcode"
-msgstr "小部件簡碼"
+msgstr "小工具簡碼"
 
-#: wpsite-shortcode.php:198
+#: includes/wordpress-shortcodes.php:101 includes/wordpress-shortcodes.php:116
 msgid "Use the shortcode below to display your WordPress Default Widget."
-msgstr "使用下面的簡碼顯示您的WordPress預設小部件。"
+msgstr "使用下面的簡碼顯示您的WordPress預設小工具。"
 
-#: wpsite-shortcode.php:199
+#: includes/wordpress-shortcodes.php:102
 msgid "Search Widget"
-msgstr "搜尋小部件"
+msgstr "搜尋小工具"
 
-#: wpsite-shortcode.php:201
+#: includes/wordpress-shortcodes.php:104
 msgid "Calendar Widget"
-msgstr "日曆小部件"
+msgstr "日曆小工具"
 
-#: wpsite-shortcode.php:203
+#: includes/wordpress-shortcodes.php:106
 msgid "Tags Widget"
-msgstr "標籤小部件"
+msgstr "標籤小工具"
 
-#: wpsite-shortcode.php:205
+#: includes/wordpress-shortcodes.php:108
 msgid "Recent Posts Widget"
-msgstr "最近文章小部件"
+msgstr "最近文章小工具"
 
-#: wpsite-shortcode.php:207
+#: includes/wordpress-shortcodes.php:110
 msgid "Recent Comments Widget"
-msgstr "近期評論小部件"
+msgstr "近期評論小工具"
 
-#: wpsite-shortcode.php:212
+#: includes/wordpress-shortcodes.php:115
+msgid "Date Shortcode"
+msgstr "日期簡碼"
+
+#: includes/wordpress-shortcodes.php:117
+msgid "Show Year"
+msgstr "顯示年份"
+
+#: includes/wordpress-shortcodes.php:119
+msgid "Show Month"
+msgstr "顯示月份"
+
+#: includes/wordpress-shortcodes.php:121
+msgid "Show Day"
+msgstr "顯示日期"
+
+#: includes/wordpress-shortcodes.php:126
+msgid "Character Shortcode"
+msgstr "字元簡碼"
+
+#: includes/wordpress-shortcodes.php:127
+msgid "Use the shortcode below to display your Website Character."
+msgstr "使用下面的簡碼顯示您的網站字元。"
+
+#: includes/wordpress-shortcodes.php:128
+msgid "Copyright Character"
+msgstr "版權符號"
+
+#: includes/wordpress-shortcodes.php:130
+msgid "Registered Trademark Character"
+msgstr "註冊商標符號"
+
+#: includes/wordpress-shortcodes.php:132
+msgid "TM Trademark Character"
+msgstr "TM商標符號"
+
+#: includes/wordpress-shortcodes.php:134
+msgid "Service Mark Trademark Character"
+msgstr "服務標記商標符號"
+
+#: includes/wordpress-shortcodes.php:139
 msgid "Other Shortcode"
 msgstr "其他簡碼"
 
-#: wpsite-shortcode.php:213
+#: includes/wordpress-shortcodes.php:140
 msgid "More shortcodes will follow…"
 msgstr "更多簡碼將隨之而來..."
 
-#: wpsite-shortcode.php:214
+#: includes/wordpress-shortcodes.php:141
 msgid ""
 "If you need dynamic data shortcode for WooCommerce, bbPress, BuddyPress, we "
 "will add it in future version."
 msgstr ""
 "如果您需要WooCommerce，bbPress，BuddyPress的動態資料簡碼，我們將在未來的版本"
 "中新增。"
+
+#: shortcodes/wpsite-users.php:130
+msgid "Never"
+msgstr "從未有過"
+
+#: wpsite-shortcode.php:66
+msgid "Site Shortcode"
+msgstr "網站簡碼"
 
 #. Plugin Name of the plugin/theme
 msgid "WPSite Shortcode"

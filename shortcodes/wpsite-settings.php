@@ -56,17 +56,16 @@ function wpsite_shortcode_admin_email() {
 add_shortcode( 'wpsite_email', 'wpsite_shortcode_admin_email' );
 
 
-//Date Format Shortocde:[wpsite_date]
-function wpsite_shortcode_date_format() {
-  $date_format = get_option( 'date_format' );
-  return $date_format;
+// Date format shortcode: [wpsite_date]
+function wpsite_shortcode_date() {
+  $current_date = date_i18n( get_option( 'date_format' ) );
+  return $current_date;
 }
-add_shortcode( 'wpsite_date', 'wpsite_shortcode_date_format' );
+add_shortcode( 'wpsite_date', 'wpsite_shortcode_date' );
 
-
-//Time Format Shortocde:[wpsite_time]
-function wpsite_shortcode_time_format() {
-  $time_format = get_option( 'time_format' );
-  return $time_format;
+// Time format shortcode: [wpsite_time]
+function wpsite_shortcode_time() {
+  $current_time = date_i18n( get_option( 'time_format' ) );
+  return $current_time;
 }
-add_shortcode( 'wpsite_time', 'wpsite_shortcode_time_format' );
+add_shortcode( 'wpsite_time', 'wpsite_shortcode_time' );

@@ -59,27 +59,3 @@ function wpsite_shortcode_day( $atts ) {
 }
 add_shortcode( 'wpsite_d', 'wpsite_shortcode_day' );
 
-
-// Copyright Shortcode: [wpsite_c]
-function wpsite_shortcode_copy() {
-    return '©';
-}
-add_shortcode( 'wpsite_c', 'wpsite_shortcode_copy' );
-
-// Registered Trademark Shortcode: [wpsite_r]
-function wpsite_shortcode_registered_trademark() {
-    return '®';
-}
-add_shortcode( 'wpsite_r', 'wpsite_shortcode_registered_trademark' );
-
-// Trademark Shortcode: [wpsite_tm]
-function wpsite_shortcode_trademark() {
-    return '™';
-}
-add_shortcode( 'wpsite_tm', 'wpsite_shortcode_trademark' );
-
-// Service Mark Trademark Shortcode: [wpsite_sm]
-function wpsite_shortcode_servicemark_trademark() {
-    return '℠';
-}
-add_shortcode( 'wpsite_sm', 'wpsite_shortcode_servicemark_trademark' );

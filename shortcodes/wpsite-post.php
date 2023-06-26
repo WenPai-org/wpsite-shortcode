@@ -1,7 +1,7 @@
 <?php
 /*
 Includes shortocdes
-Since: 1.1
+Since: 1.0
 Author: WPSite.cn
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -45,23 +45,6 @@ function wpsite_shortcode_post_author( $atts ) {
   return $atts['before'] . $post_author . $atts['after'];
 }
 add_shortcode( 'wpsite_postauthor', 'wpsite_shortcode_post_author' );
-
-
-// Post Author Avatar Shortcode: [wpsite_author_avatar]
-function wpsite_shortcode_author_avatar( $atts ) {
-  $atts = shortcode_atts( array(
-    'size' => '96',
-  ), $atts );
-
-  $post_id = get_the_ID();
-  $author_id = get_post_field( 'post_author', $post_id );
-
-  $avatar = get_avatar( $author_id, $atts['size'] );
-
-  return $avatar;
-}
-add_shortcode( 'wpsite_author_avatar', 'wpsite_shortcode_author_avatar' );
-
 
 
 //Post Date Shortcode:[wpsite_postdate]
