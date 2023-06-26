@@ -32,6 +32,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="wpsite-shortcode-column">
           <h3><span class="dashicons dashicons-admin-users"></span> <?php _e( 'User Shortcode', 'wpsite-shortcode' ); ?></h3>
           <p><?php _e( 'Use the shortcode below to display your WordPress Current User Detail.', 'wpsite-shortcode' ); ?></p>
+          <p><?php _e( 'User Login', 'wpsite-shortcode' ); ?></p>
+          <code>[wpsite_userlogin]</code>
           <p><?php _e( 'User Name', 'wpsite-shortcode' ); ?></p>
           <code>[wpsite_username]</code>
           <p><?php _e( 'Nick Name', 'wpsite-shortcode' ); ?></p>
@@ -40,6 +42,8 @@ if ( ! defined( 'ABSPATH' ) ) {
           <code>[wpsite_useremail]</code>
           <p><?php _e( 'User Avatar', 'wpsite-shortcode' ); ?></p>
           <code>[wpsite_avatar]</code>
+          <p><?php _e( 'User Role Name', 'wpsite-shortcode' ); ?></p>
+          <code>[wpsite_role]</code>
           <p><?php _e( 'User Role', 'wpsite-shortcode' ); ?></p>
           <code>[wpsite_userrole]</code>
           <p><?php _e( 'User Bio', 'wpsite-shortcode' ); ?></p>

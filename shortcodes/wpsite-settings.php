@@ -1,5 +1,11 @@
 <?php
-
+/*
+Includes shortocde
+Since: 1.0
+Author: WPSite.cn
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+*/
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
@@ -50,14 +56,15 @@ function wpsite_shortcode_admin_email() {
 add_shortcode( 'wpsite_email', 'wpsite_shortcode_admin_email' );
 
 
-// Date format shortcode: [wpsite_date]
+//Date Format Shortocde:[wpsite_date]
 function wpsite_shortcode_date() {
   $current_date = date_i18n( get_option( 'date_format' ) );
   return $current_date;
 }
 add_shortcode( 'wpsite_date', 'wpsite_shortcode_date' );
 
-// Time format shortcode: [wpsite_time]
+
+//Time Format Shortocde:[wpsite_time]
 function wpsite_shortcode_time() {
   $current_time = date_i18n( get_option( 'time_format' ) );
   return $current_time;

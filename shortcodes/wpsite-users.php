@@ -21,28 +21,48 @@ function wpsite_shortcode_user_name( $atts ) {
 add_shortcode( 'wpsite_username', 'wpsite_shortcode_user_name' );
 
 
-//Nick Name Shortcode:[wpsite_nickname]
+//User Login Shortcode: [wpsite_userlogin]
+function wpsite_user_login_shortcode() {
+    $user_login = '';
+
+    if ( is_user_logged_in() ) {
+        $current_user = wp_get_current_user();
+        $user_login = $current_user->user_login;
+    }
+
+    return $user_login;
+}
+add_shortcode( 'wpsite_userlogin', 'wpsite_user_login_shortcode' );
+
+
+//Nickname Shortcode: [wpsite_nickname]
 function wpsite_user_nickname_shortcode() {
-    $user_nickname = get_the_author_meta( 'nickname' );
+    $current_user = wp_get_current_user();
+    $user_nickname = $current_user->nickname;
     return $user_nickname;
 }
 add_shortcode( 'wpsite_nickname', 'wpsite_user_nickname_shortcode' );
 
 
-//User Bio Shortcode:[wpsite_userbio]
+
+//User Bio Shortcode: [wpsite_userbio]
 function wpsite_user_bio_shortcode() {
-    $user_bio = get_the_author_meta( 'description' );
+    $current_user = wp_get_current_user();
+    $user_bio = $current_user->description;
     return $user_bio;
 }
 add_shortcode( 'wpsite_userbio', 'wpsite_user_bio_shortcode' );
 
 
-//User Website Shortcode:[wpsite_website]
+
+// User Website Shortcode: [wpsite_website]
 function wpsite_user_website_shortcode() {
-    $user_website = get_the_author_meta( 'user_url' );
+    $current_user = wp_get_current_user();
+    $user_website = $current_user->user_url;
     return $user_website;
 }
 add_shortcode( 'wpsite_website', 'wpsite_user_website_shortcode' );
+
 
 
 //User EMail Shortcode:[wpsite_useremail]
@@ -60,10 +80,11 @@ function wpsite_shortcode_user_email( $atts ) {
 add_shortcode( 'wpsite_useremail', 'wpsite_shortcode_user_email' );
 
 
+
 //User Avatar Shortcode:[wpsite_avatar]
 function wpsite_shortcode_user_avatar( $atts ) {
   $atts = shortcode_atts( array(
-    'size' => 96,
+    'size' => 256,
     'class' => '',
     'alt' => '',
   ), $atts );
@@ -76,6 +97,7 @@ function wpsite_shortcode_user_avatar( $atts ) {
   return $user_avatar;
 }
 add_shortcode( 'wpsite_avatar', 'wpsite_shortcode_user_avatar' );
+
 
 
 //User Role Shortcode:[wpsite_userrole]
@@ -93,7 +115,40 @@ function wpsite_shortcode_user_role( $atts ) {
 add_shortcode( 'wpsite_userrole', 'wpsite_shortcode_user_role' );
 
 
-//User Registered Date:[wpsite_userdate]
+
+//User Role Name Shortcode:[wpsite_role]
+function wpsite_shortcode_role( $atts ) {
+  $atts = shortcode_atts( array(
+    'before' => '',
+    'after' => '',
+  ), $atts );
+
+  $user_roles = wp_get_current_user()->roles;
+  $user_role = reset($user_roles); // get first user role
+
+  $role_name = '';
+
+  $role_map = array(
+    'administrator' => __( 'Administrator', 'wpsite-shortcode' ),
+    'editor' => __( 'Editor', 'wpsite-shortcode' ),
+    'author' => __( 'Author', 'wpsite-shortcode' ),
+		'contributor' => __( 'Contributor', 'wpsite-shortcode' ),
+		'subscriber' => __( 'Subscriber', 'wpsite-shortcode' ),
+  );
+
+  if ( array_key_exists( $user_role, $role_map ) ) {
+    $role_name = $role_map[ $user_role ];
+  }
+
+  return $atts['before'] . $role_name . $atts['after'];
+}
+add_shortcode( 'wpsite_role', 'wpsite_shortcode_role' );
+
+
+
+
+
+//User Registered Date: [wpsite_userdate]
 function wpsite_shortcode_user_reg_date( $atts ) {
   $atts = shortcode_atts( array(
     'before' => '',
@@ -101,7 +156,8 @@ function wpsite_shortcode_user_reg_date( $atts ) {
     'format' => get_option( 'date_format' ),
   ), $atts );
 
-  $user_reg_date = get_the_author_meta( 'user_registered', get_current_user_id() );
+  $current_user = wp_get_current_user();
+  $user_reg_date = $current_user->user_registered;
   $user_reg_date = date_i18n( $atts['format'], strtotime( $user_reg_date ) );
 
   return $atts['before'] . $user_reg_date . $atts['after'];
@@ -109,21 +165,22 @@ function wpsite_shortcode_user_reg_date( $atts ) {
 add_shortcode( 'wpsite_userdate', 'wpsite_shortcode_user_reg_date' );
 
 
- //User Last Login:[wpsite_lastlogin]
-function wpsite_shortcode_user_last_login( $atts ) {
-  $atts = shortcode_atts( array(
-    'before' => '',
-    'after' => '',
-    'format' => get_option( 'date_format' ),
-  ), $atts );
 
-  $user_last_login = get_the_author_meta( 'last_login', get_current_user_id() );
-  if ( ! empty( $user_last_login ) ) {
-    $user_last_login = date_i18n( $atts['format'], strtotime( $user_last_login ) );
-  } else {
-    $user_last_login = __( 'Never', 'wpsite-shortcode' );
-  }
-
-  return $atts['before'] . $user_last_login . $atts['after'];
+// User Last Login: [wpsite_lastlogin]
+function user_last_login( $user_login, $user ) {
+    update_user_meta( $user->ID, 'last_login', time() );
 }
-add_shortcode( 'wpsite_lastlogin', 'wpsite_shortcode_user_last_login' );
+add_action( 'wp_login', 'user_last_login', 10, 2 );
+
+function wpsite_shortcode_user_lastlogin() {
+    $last_login = get_the_author_meta('last_login');
+
+    if ( ! $last_login ) {
+        return 'Never';
+    }
+
+    $the_login_date = human_time_diff($last_login);
+    return $the_login_date;
+}
+
+add_shortcode('wpsite_lastlogin','wpsite_shortcode_user_lastlogin');

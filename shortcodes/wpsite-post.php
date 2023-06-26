@@ -106,11 +106,22 @@ function wpsite_shortcode_post_featured_image( $atts ) {
   ), $atts );
 
   $post_id = get_the_ID();
-  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), $atts['size'] );
+  $thumbnail_id = get_post_thumbnail_id( $post_id );
+
+  if ( ! $thumbnail_id ) {
+    return ''; // Return empty string if there is no featured image for the post
+  }
+
+  $image = wp_get_attachment_image_src( $thumbnail_id, $atts['size'] );
+
+  if ( ! $image || ! is_array( $image ) || ! isset( $image[0] ) ) {
+    return ''; // Return empty string if there is an issue retrieving the image URL
+  }
 
   return $image[0];
 }
 add_shortcode( 'wpsite_postimage', 'wpsite_shortcode_post_featured_image' );
+
 
 
 //Post Tags Shortcode:[wpsite_posttag]

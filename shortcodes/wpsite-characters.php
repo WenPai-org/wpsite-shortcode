@@ -30,7 +30,7 @@ function wpsite_shortcode_trademark() {
 add_shortcode( 'wpsite_tm', 'wpsite_shortcode_trademark' );
 
 // Service Mark Trademark Shortcode: [wpsite_sm]
-function wpsite_shortcode_servicemark_trademark() {
+function wpsite_shortcode_servicemark() {
     return '℠';
 }
-add_shortcode( 'wpsite_sm', 'wpsite_servicemark_trademark' );
+add_shortcode( 'wpsite_sm', 'wpsite_shortcode_servicemark' );

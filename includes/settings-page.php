@@ -26,8 +26,6 @@ function wpsite_shortcode_render_settings_page() {
         $plugin_data = get_plugin_data( __FILE__ );
         ?>
         <li><?php printf( __( 'Total shortcodes: %d', 'wpsite-shortcode' ), wpsite_shortcode_count() ); ?></li>
-        <li><?php printf( __( 'Version: %s', 'wpsite-shortcode' ), $plugin_data['Version'] ); ?></li>
-        <li><?php printf( __( 'Author: %s', 'wpsite-shortcode' ), $plugin_data['Author'] ); ?></li>
         <li><?php printf( __( 'Support: <a href="%s" target="_blank">View Document</a>', 'wpsite-shortcode' ), 'https://wpsite.cn/document' ); ?></li>
       </ul>
     </div>

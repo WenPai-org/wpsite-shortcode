@@ -7,7 +7,7 @@
  * Author URI: https://wpsite.cn/
  * Text Domain: wpsite-shortcode
  * Domain Path: /languages
- * Version: 1.1.2
+ * Version: 1.2
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *
@@ -35,7 +35,7 @@ require_once( plugin_dir_path( __FILE__ ) . 'shortcodes/wpsite-widgets.php' );
 require_once( plugin_dir_path( __FILE__ ) . 'shortcodes/wpsite-post.php' );
 require_once( plugin_dir_path( __FILE__ ) . 'shortcodes/wpsite-media.php' );
 require_once( plugin_dir_path( __FILE__ ) . 'shortcodes/wpsite-date.php' );
-
+require_once( plugin_dir_path( __FILE__ ) . 'shortcodes/wpsite-characters.php' );
 
 // Enqueue the plugin CSS stylesheet.
 function wpsite_shortcode_enqueue_scripts() {
