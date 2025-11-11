@@ -59,6 +59,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="wpsite-shortcode-column">
           <h3><span class="dashicons dashicons-admin-post"></span> <?php _e( 'Post Shortcode', 'wpsite-shortcode' ); ?></h3>
           <p><?php _e( 'Use the shortcode below to display your WordPress Post/Pages Metadata.', 'wpsite-shortcode' ); ?></p>
+          <p><?php _e( 'Post ID', 'wpsite-shortcode' ); ?></p>
+          <code>[wpsite_postid]</code>
           <p><?php _e( 'Post Title', 'wpsite-shortcode' ); ?></p>
           <code>[wpsite_posttitle]</code>
           <p><?php _e( 'Post Excerpt', 'wpsite-shortcode' ); ?></p>
